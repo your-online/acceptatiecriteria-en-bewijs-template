@@ -14,23 +14,29 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
   Dit heeft de voorkeur, want er komt geen oordeel aan te pas.
 - **Bewijsbestanden** — Alles wat niet als tekst te vangen is: screenshot, GIF, schermopname,
   logbestand. Kan de agent het niet zelf vastleggen, dan levert een persoon het aan.
+- **Schermopname** — Een korte gif of video van het gedrag telt ook als bewijs, bijvoorbeeld
+  wanneer iets alleen in beweging te zien is.
+- **Agent-oordeel** — Kan iets niet programmatisch worden aangetoond, dan is een beoordelend
+  oordeel van een agent over code, gedrag of beelden een geldige bewijsvorm. Het streven blijft:
+  programmatisch waar het kan.
 
-## Runs en vrijgave
+## Runs en uitrol-checklist
 
 Een ingevuld document is **één verificatierun**: één machine, één uitvoerder. Dat een
 criterium op de laptop van de bouwer werkt, zegt niets over een andere laptop. Daarom is
 "op een tweede machine gecontroleerd" geen extra criterium maar een tweede run, en dus een
 tweede ingevuld bestand.
 
-De sectie Vrijgave onderaan het template bevat de poorten die samen bepalen of er uitgerold
+De sectie Checklist voor uitrol onderaan het template bevat de poorten die samen bepalen of er uitgerold
 mag worden. De belangrijkste: twee runs, op verschillende machines, door verschillende
 personen, waarbij de scriptuitvoer van beide runs een **verschillende hostname** toont.
 
-Laat het verificatiescript daarom als eerste regels hostname, OS-versie, gebruiker en
-image-digest printen. Dan is de tweede machine aantoonbaar uit de uitvoer zelf, in plaats van
+Laat het verificatiescript daarom als eerste regels hostname, OS-versie, gebruiker en het
+unieke controlegetal van de build (de image-digest) printen. Dan is de tweede machine aantoonbaar uit de uitvoer zelf, in plaats van
 een belofte van degene die het invulde. Wat een script niet kan vastleggen, zoals een
-instelling in een grafische interface, krijgt een bevestigingsveld met naam en datum onder de
-bijlagen.
+instelling in een grafische interface, krijgt een ondertekeningsveld met naam en datum onder de
+bijlagen. Dat veld wordt automatisch gevuld vanuit "Uitgevoerd door" en de datum bovenaan, totdat
+iemand het zelf aanpast.
 
 ## Soorten oordelen
 
@@ -41,9 +47,13 @@ bijlagen.
 
 ## Voorbeeld van een ingevulde check
 
-> **De testsuite trekt de juiste conclusie uit een gegeven uitvoer** — Voldaan
->
-> Voer twaalf bekend-foute configuraties aan de bewaker. Alle twaalf worden afgekeurd.
+Dit voorbeeld stond eerder in het template zelf. Daar was het ruis: het template bevat alleen nog
+lege criteria. Zo ziet een volledig ingevulde check eruit.
+
+**Check** — De testsuite trekt de juiste conclusie uit een gegeven uitvoer · status **Voldaan**
+
+**Criterium** — Voer twaalf bekend-foute configuraties aan de bewaker. Alle twaalf worden
+afgekeurd.
 
 **Script uitvoer**
 

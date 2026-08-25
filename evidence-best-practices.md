@@ -40,6 +40,16 @@ een verslag van te maken.
    ([agileway](https://agileway.substack.com/p/why-recording-videos-for-automated)).
 9. **Oordeel van een taalmodel.** Het zwakste bewijs; zie de valkuilen hieronder.
 
+## Twee vormen die er ook bij horen
+
+**Korte schermopname (gif of video).** Geldig bewijs, en soms het enige dat werkt: gedrag dat
+alleen in beweging te zien is, laat zich niet in een screenshot vangen. Houd het kort en noem in
+beeld het tijdstip en het systeem.
+
+**Beoordelend agent-oordeel.** Kan iets niet programmatisch worden aangetoond, dan is een oordeel
+van een agent over code, gedrag of beelden een geldige bewijsvorm — mits een actueel flagship-model
+met verse context, en met een mens die tekent. Het streven blijft: programmatisch waar het kan.
+
 ## Wat alleen een mens kan
 
 Akkoord dat het criterium het juiste criterium is. Het oordeel over subjectieve criteria zoals

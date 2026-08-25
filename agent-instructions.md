@@ -3,7 +3,8 @@
 Lees eerst [`evidence-best-practices.md`](evidence-best-practices.md): daar staat welke bewijsvormen sterk zijn,
 welke zwak, en waar het misgaat.
 
-Deze instructie hoort bij het template `template.html`, maar staat er los van. Je kunt de
+Deze instructie hoort bij het template `template.html`, maar staat er los van. Het template zelf
+bevat deze uitleg niet meer: dit bestand is de enige plek waar de agent-instructie staat. Je kunt de
 werkwijze hieronder ook gebruiken zonder dat template, en het template gebruiken zonder agent.
 
 Het gaat om een document waarin per acceptatiecriterium bewijs wordt vastgelegd en beoordeeld.
@@ -30,6 +31,10 @@ Vul dit document in. Per criterium:
 
 - Voer de controle uit die onder het criterium staat.
 - Plak de letterlijke script uitvoer in het veld. Verkort of herschrijf hem niet.
+- Laat het script als eerste regels hostname, OS-versie, gebruiker en het unieke
+  controlegetal van de build (de image-digest) printen. Daarmee is achteraf
+  aantoonbaar op welke machine de run draaide en hoeft niemand op een belofte af
+  te gaan.
 - Kun je iets niet zelf vastleggen, bijvoorbeeld een schermafbeelding, laat het
   veld dan leeg en noteer dat een persoon dat bestand moet aanleveren.
 - Lukt een controle niet, laat het veld leeg en noteer waarom.
