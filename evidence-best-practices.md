@@ -37,10 +37,17 @@ staat uitgewerkt in [AGENTS.md](AGENTS.md#agent-bevindingen).
 
 ## Wat alleen een mens kan
 
-Akkoord dat het criterium het juiste criterium is; het oordeel over subjectieve criteria zoals
-werkbaarheid; de sign-off en het dragen van het restrisico. De valkuil is dat subjectieve criteria
-zich verstoppen tussen de mechanische
-([paelladoc.com](https://paelladoc.com/blog/acceptance-criteria-for-ai-agents/)).
+De sign-off en het dragen van het restrisico, en waarneming buiten het systeem om. De rest is
+tegenwoordig ook aan een agent toe te vertrouwen, inclusief het beoordelen van de criteria zelf.
+
+## Deugen de criteria en de tests zelf?
+
+Een criterium of test moet inhoudelijk meten wat er gemeten moet worden, niet iets dat de
+coverage hoog laat lijken. Beoordeel dat zelf, of zet er een falsifier-subagent op die toetst hoe
+goed de acceptatiecriteria zijn en hoe goed de tests die erbij horen. Gebruik daarvoor een van de
+sterkste modellen (Opus 5, Fable 5, GPT-5.6, Sol); die hebben hier inmiddels goed oordeelsvermogen
+over. Best practices hiervoor staan in
+[agentic-coding-skills](https://github.com/your-online/agentic-coding-skills).
 
 ## Drie valkuilen
 
