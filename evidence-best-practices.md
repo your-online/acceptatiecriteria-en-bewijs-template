@@ -12,21 +12,21 @@ Praktisch: laat de controle zelf zijn bewijs wegschrijven.
 
 ## Sterkte van bewijsvormen, van sterk naar zwak
 
-<a id="config-dump"></a>1. **Config-dump plus diff tegen een vastgelegde baseline.** Machine-leesbaar en diffbaar.
-<a id="exit-code"></a>2. **Positieve en negatieve assertie met exit code.** De negatieve test bewijst dat de beperking
+1. <a id="config-dump"></a>**Config-dump plus diff tegen een vastgelegde baseline.** Machine-leesbaar en diffbaar.
+2. <a id="exit-code"></a>**Positieve en negatieve assertie met exit code.** De negatieve test bewijst dat de beperking
    werkt, niet alleen dat hij bestaat.
 3. **Evidence bundle per criterium:** commando's, stdout/stderr, exit code, tijdstip en
    omgevingsfingerprint ([arxiv.org/pdf/2605.20456](https://arxiv.org/pdf/2605.20456)).
 4. **Onafhankelijk anker:** CI-run met permalink of append-only log met hash-chain; buiten de
    agent om herleidbaar.
 5. **Hash of checksum** van image, lockfile of policybestand. Bewijst identiteit, niet gedrag.
-<a id="terminal-opname"></a>6. **Terminal-recording ([asciinema](https://github.com/asciinema/asciinema)).** Tekstueel, klein,
+6. <a id="terminal-opname"></a>**Terminal-recording ([asciinema](https://github.com/asciinema/asciinema)).** Tekstueel, klein,
    doorzoekbaar; beter dan een screenshot van een terminal.
 7. **UI-trace (Playwright).** DOM-snapshots, netwerk en console in één opname; beantwoordt
    "waarom", niet alleen "wat", en is lastig te vervalsen. Archiveer hem bij de oplevering, want
    CI bewaart hem 30 tot 90 dagen
    ([TestCollab](https://testcollab.com/blog/playwright-testing-evidence-at-scale)).
-<a id="screenshot"></a>8. **Screenshot.** Bewijst alleen de toestand op dat moment
+8. <a id="screenshot"></a>**Screenshot.** Bewijst alleen de toestand op dat moment
    ([thesoc2.com](https://www.thesoc2.com/post/what-counts-as-valid-evidence-in-soc2-type-ii-audits)).
    Alleen voor criteria waar echt een grafische interface in beeld moet; eis tijdstip en een
    herkenbaar systeem in beeld.
