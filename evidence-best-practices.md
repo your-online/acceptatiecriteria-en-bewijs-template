@@ -17,8 +17,8 @@ een verslag van te maken.
 
 ## Sterkte van bewijsvormen, van sterk naar zwak
 
-1. **Config-dump plus diff tegen een vastgelegde baseline.** Machine-leesbaar en diffbaar.
-2. **Positieve én negatieve assertie met exit code.** De negatieve test bewijst dat de beperking
+<a id="config-dump"></a>1. **Config-dump plus diff tegen een vastgelegde baseline.** Machine-leesbaar en diffbaar.
+<a id="exit-code"></a>2. **Positieve én negatieve assertie met exit code.** De negatieve test bewijst dat de beperking
    wérkt, niet dat hij bestaat.
 3. **Evidence bundle per criterium:** de uitgevoerde commando's, stdout en stderr, de exit code,
    het tijdstip en een omgevingsfingerprint. Zie de minimumbundel in Agentic Agile-V
@@ -27,10 +27,10 @@ een verslag van te maken.
    hash-chain. Buiten de agent om herleidbaar.
 5. **Hash of checksum** van image, lockfile of policybestand. Bewijst identiteit, niet gedrag:
    bruikbaar om vast te leggen vóór welke versie een criterium gold.
-6. **Terminal-recording (asciinema).** Tekstueel, klein, doorzoekbaar en kopieerbaar; strikt beter
+<a id="terminal-opname"></a>6. **Terminal-recording (asciinema).** Tekstueel, klein, doorzoekbaar en kopieerbaar; strikt beter
    dan een screenshot van een terminal
    ([asciinema](https://github.com/asciinema/asciinema)).
-7. **Screenshot.** Bewijst alleen de toestand op het moment van vastleggen en is waardeloos zonder
+<a id="screenshot"></a>7. **Screenshot.** Bewijst alleen de toestand op het moment van vastleggen en is waardeloos zonder
    context. Auditors willen liever de bron zelf
    ([thesoc2.com](https://www.thesoc2.com/post/what-counts-as-valid-evidence-in-soc2-type-ii-audits)).
    Gebruik het alleen voor criteria waar echt een grafische interface in beeld moet, en eis dan dat
