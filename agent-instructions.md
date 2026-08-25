@@ -43,6 +43,22 @@ Vul dit document in. Per criterium:
 - Vul nooit een aanname in, en beoordeel je eigen invulling niet.
 ```
 
+## Agent-bevindingen
+
+Sommige criteria zijn niet programmatisch aan te tonen. Dan levert een aparte agent
+**agent-bevindingen** als bewijsvorm. De regels:
+
+- De agent heeft een **verse context**: hij is niet de bouwer en heeft de bouw-conversatie niet
+  gezien.
+- De agent is **niet geïncentiveerd om bewijs te leveren**. De opdracht is: kijk objectief naar de
+  code, het gedrag of de beelden en rapporteer wat je vindt én wat je niet vindt. "Geen bewijs
+  gevonden" is een even geldig resultaat.
+- Elke claim verwijst naar iets aanwijsbaars: een bestandsregel, een logregel, een screenshot.
+- Daarna wordt een **falsifier-subagent** gespand met als enig doel de bevindingen te weerleggen.
+  Dit is een aparte stap, los van het falsifier-oordeel over regulier bewijs (sectie 2): hier is de
+  hypothese "de claims in de agent-bevindingen kloppen", en de falsifier probeert die onderuit te
+  halen.
+
 ## 2. Bewijs controleren via falsifier subagent
 
 Aparte agent op het hoogst beschikbare flagship-model, bijvoorbeeld Opus 5, Fable 5, GPT-5.6 of Sol (effort-stand maakt niet uit), met verse context,

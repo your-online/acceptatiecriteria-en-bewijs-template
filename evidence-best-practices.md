@@ -42,13 +42,17 @@ een verslag van te maken.
 
 ## Twee vormen die er ook bij horen
 
-**Korte schermopname (gif of video).** Geldig bewijs, en soms het enige dat werkt: gedrag dat
-alleen in beweging te zien is, laat zich niet in een screenshot vangen. Houd het kort en noem in
+**Korte schermopname (bij voorkeur gif).** Geldig bewijs, en soms het enige dat werkt: gedrag dat
+alleen in beweging te zien is, laat zich niet in een screenshot vangen. Kies een gif boven een
+video: video is zwaar en deelt lastig, bijvoorbeeld in een pull request. Houd het kort en noem in
 beeld het tijdstip en het systeem.
 
-**Beoordelend agent-oordeel.** Kan iets niet programmatisch worden aangetoond, dan is een oordeel
-van een agent over code, gedrag of beelden een geldige bewijsvorm — mits een actueel flagship-model
-met verse context, en met een mens die tekent. Het streven blijft: programmatisch waar het kan.
+**Agent-bevindingen.** Kan iets niet programmatisch worden aangetoond, dan kijkt een agent met
+verse context — niet de bouwer, zonder belang bij de uitkomst — objectief naar code, gedrag of
+beelden en rapporteert wat hij wel en niet vindt; een falsifier-subagent probeert die bevindingen
+daarna te weerleggen. Gebruik een actueel flagship-model, en laat een mens tekenen. Zie
+[agent-instructions.md](agent-instructions.md#agent-bevindingen). Het streven blijft:
+programmatisch waar het kan.
 
 ## Wat alleen een mens kan
 

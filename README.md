@@ -12,13 +12,15 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
 
 - **Script uitvoer** — Een script voert de controle uit; de letterlijke uitvoer komt hier te staan.
   Dit heeft de voorkeur, want er komt geen oordeel aan te pas.
-- **Bewijsbestanden** — Alles wat niet als tekst te vangen is: screenshot, GIF, schermopname,
-  logbestand. Kan de agent het niet zelf vastleggen, dan levert een persoon het aan.
-- **Schermopname** — Een korte gif of video van het gedrag telt ook als bewijs, bijvoorbeeld
-  wanneer iets alleen in beweging te zien is.
-- **Agent-oordeel** — Kan iets niet programmatisch worden aangetoond, dan is een beoordelend
-  oordeel van een agent over code, gedrag of beelden een geldige bewijsvorm. Het streven blijft:
-  programmatisch waar het kan.
+- **Bewijsbestanden** — Alles wat niet als tekst te vangen is: screenshot, korte gif, logbestand.
+  Liever een gif dan een video: video is zwaar en deelt lastig, bijvoorbeeld in een pull request.
+  Kan de agent het niet zelf vastleggen, dan levert een persoon het aan.
+- **Agent-bevindingen** — Kan iets niet programmatisch worden aangetoond, dan kijkt een agent met
+  verse context — niet de bouwer, zonder belang bij de uitkomst — objectief naar code, gedrag of
+  beelden en rapporteert wat hij wel en niet vindt. Een falsifier-subagent probeert die bevindingen
+  daarna te weerleggen; dit staat los van het falsifier-oordeel bij de soorten oordelen. Zie
+  [Agent-bevindingen in agent-instructions.md](agent-instructions.md#agent-bevindingen). Het
+  streven blijft: programmatisch waar het kan.
 
 ## Runs en uitrol-checklist
 
