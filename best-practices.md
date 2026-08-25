@@ -56,12 +56,21 @@ zakte de hacked resolution rate van 28,57% naar 0,56% zodra daarop gefilterd wer
 hoort buiten de schrijfrechten van de agent te liggen, en het bewijs moet de uitgevoerde
 commando's tonen, niet alleen de uitkomst.
 
-**Een modeloordeel is geen poort.** Judges zijn niet-deterministisch en hebben positie-,
-verbosity- en self-enhancement-bias
-([braintrust.dev](https://www.braintrust.dev/articles/what-is-llm-as-a-judge)). Antwoorden die
-alleen uit leestekens bestaan haalden tot 35% false positives bij GPT-4o
-([arxiv.org/pdf/2507.08794](https://arxiv.org/pdf/2507.08794)). Gebruik het als signaal bij
-criteria waar niets deterministisch kan, nooit als beslissende stap.
+**Een modeloordeel telt mee, maar beslist niet.** Het onderzoek dat vaak wordt aangehaald
+is gedateerd: de bekendste bevinding, dat antwoorden die alleen uit leestekens bestaan tot 35%
+false positives haalden, is gemeten op GPT-4o
+([arxiv.org/pdf/2507.08794](https://arxiv.org/pdf/2507.08794), juli 2025). Dat model is
+inmiddels ruim voorbijgestreefd. Een actueel flagship-model als beoordelaar is een legitieme
+manier om bewijs te toetsen, mits je er ook echt een neerzet: Opus 5, Fable 5, GPT-5.6 of Sol.
+Zet er geen klein of goedkoop model op; dan komt de kritiek uit dat onderzoek wel terug.
+
+Twee eisen blijven staan, en die gaan niet over modelkwaliteit. De beoordelaar draait met verse
+context, want een model dat net zelf het bewijs schreef bevestigt zijn eigen werk
+(self-enhancement bias, https://www.braintrust.dev/articles/what-is-llm-as-a-judge). En de
+uitkomst is geen eindoordeel: dat een beoordeling deugt, maakt haar nog niet tot degene die het
+risico draagt. Bij een beslissing over toegang of beveiliging hoort een mens te tekenen. Dat is
+een verantwoordelijkheidsargument, geen capaciteitsargument, en het blijft dus gelden hoe goed
+de modellen ook worden.
 
 **Claimable criteria.** Een criterium deugt pas als een agent geen "geslaagd" kan produceren zonder
 dat het gedrag echt bestaat. Dat is een strengere eis dan alleen testbaar zijn.

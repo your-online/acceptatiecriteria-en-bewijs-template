@@ -40,7 +40,7 @@ Vul dit document in. Per criterium:
 
 ## 2. Bewijs controleren via falsifier subagent
 
-Aparte agent op het hoogst beschikbare model (effort-stand maakt niet uit), met verse context,
+Aparte agent op het hoogst beschikbare flagship-model, bijvoorbeeld Opus 5, Fable 5, GPT-5.6 of Sol (effort-stand maakt niet uit), met verse context,
 draaiend op de machine waar de controles zijn uitgevoerd zodat hij de implementatie kan inzien.
 Geef hem per criterium deze prompt en plak zijn antwoord in het veld Falsifier oordeel.
 
