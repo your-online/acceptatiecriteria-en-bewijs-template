@@ -29,9 +29,17 @@ criterium op de laptop van de bouwer werkt, zegt niets over een andere laptop. D
 "op een tweede machine gecontroleerd" geen extra criterium maar een tweede run, en dus een
 tweede ingevuld bestand.
 
-De sectie Checklist voor uitrol onderaan het template bevat de poorten die samen bepalen of er uitgerold
-mag worden. De belangrijkste: twee runs, op verschillende machines, door verschillende
-personen, waarbij de scriptuitvoer van beide runs een **verschillende hostname** toont.
+De checklist voor uitrol staat bewust niet in het template: het template beschrijft één run,
+de checklist gaat over het geheel van runs. Er mag pas uitgerold worden als:
+
+- [ ] Run 1 is afgerond: elk criterium heeft bewijs en een menselijk oordeel.
+- [ ] Run 2 is uitgevoerd op een **andere machine** door een **andere persoon**, met hetzelfde resultaat.
+- [ ] De scriptuitvoer van beide runs toont een **verschillende hostname**; de tweede machine is daarmee aantoonbaar en niet alleen beweerd.
+- [ ] Criteria die niet voldaan zijn, zijn belegd bij een eigenaar of expliciet geaccepteerd als restrisico.
+- [ ] Sign-off door de eigenaar van de uitrol.
+
+Hetzelfde principe geldt breder: uitrollen betekent verifiëren op verschillende machines of
+omgevingen (test, pre-productie), en elke omgeving levert zijn eigen ingevulde template op.
 
 Laat het verificatiescript daarom als eerste regels hostname, OS-versie, gebruiker en het
 unieke controlegetal van de build (de image-digest) printen. Dan is de tweede machine aantoonbaar uit de uitvoer zelf, in plaats van
