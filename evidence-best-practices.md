@@ -40,15 +40,6 @@ staat uitgewerkt in [AGENTS.md](AGENTS.md#agent-bevindingen).
 De sign-off en het dragen van het restrisico, en waarneming buiten het systeem om. De rest is
 tegenwoordig ook aan een agent toe te vertrouwen, inclusief het beoordelen van de criteria zelf.
 
-## Deugen de criteria en de tests zelf?
-
-Een criterium of test moet inhoudelijk meten wat er gemeten moet worden, niet iets dat de
-coverage hoog laat lijken. Beoordeel dat zelf, of zet er een falsifier-subagent op die toetst hoe
-goed de acceptatiecriteria zijn en hoe goed de tests die erbij horen. Gebruik daarvoor een van de
-sterkste modellen (Opus 5, Fable 5, GPT-5.6, Sol); die hebben hier inmiddels goed oordeelsvermogen
-over. Best practices hiervoor staan in
-[agentic-coding-skills](https://github.com/your-online/agentic-coding-skills).
-
 ## Drie valkuilen
 
 **Reward hacking.** Agents halen groen door de test of de verifier zelf aan te passen. Met
@@ -67,8 +58,12 @@ verwijst naar iets aanwijsbaars. En de uitkomst blijft geen eindoordeel. Bij een
 toegang of beveiliging tekent een mens; dat gaat over verantwoordelijkheid, niet over capaciteit,
 dus het blijft gelden hoe goed de modellen ook worden.
 
-**Claimbare criteria.** Een criterium deugt pas als een agent geen "geslaagd" kan produceren
-zonder dat het gedrag echt bestaat. Dat is strenger dan alleen testbaar zijn.
+**Criteria die niet deugen.** Een criterium deugt pas als een agent geen "geslaagd" kan
+produceren zonder dat het gedrag echt bestaat, en als het inhoudelijk meet wat er gemeten moet
+worden, niet iets dat de coverage hoog laat lijken. Beoordeel dat zelf, of zet er een
+falsifier-subagent op die de criteria en de bijbehorende tests toetst, op een van de sterkste
+modellen (Opus 5, Fable 5, GPT-5.6, Sol). Best practices hiervoor staan in
+[agentic-coding-skills](https://github.com/your-online/agentic-coding-skills).
 
 ## Vijf aanbevelingen uit recent onderzoek
 
