@@ -50,6 +50,11 @@ Laat het script als eerste regels hostname, OS-versie, gebruiker en image-digest
 machine blijkt dan uit de uitvoer zelf. Wat een script niet kan vastleggen, krijgt een
 ondertekeningsveld met naam en datum.
 
+<a id="hostname"></a>**Machine (hostname) achterhalen.** Draai `hostname` in een terminal; werkt
+op Windows, macOS en Linux. Of laat je agent het doen: "Vul in het run-document het veld Machine
+(hostname) in met de uitvoer van `hostname`." Handmatig overtypen kan, maar het liefst vult het
+script of de agent het in.
+
 ## Verder lezen
 
 - [`AGENTS.md`](AGENTS.md): de prompts voor de invulagent en de falsifier-subagent, en waarom dat
