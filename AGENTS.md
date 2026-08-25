@@ -4,8 +4,8 @@ Hoort bij `template.html`, maar werkt ook los ervan. Per criterium zijn er drie 
 falsifier-agent oordeel en menselijk oordeel. Lees eerst
 [`evidence-best-practices.md`](evidence-best-practices.md).
 
-Invullen en controleren doen **twee losse agents, allebei met verse context**: een agent die net
-zelf bewijs invulde, is geneigd zijn eigen werk te bevestigen.
+Invullen en controleren doen twee losse agents, allebei met verse context. Een agent die net zelf
+bewijs invulde, is geneigd zijn eigen werk te bevestigen.
 
 ## 1. Bewijs invullen
 
@@ -32,15 +32,15 @@ Vul dit document in. Per criterium:
 ```
 
 <a id="agent-bevindingen"></a>**Agent-bevindingen.** Is een criterium niet programmatisch aan te
-tonen, dan levert de invulagent bevindingen: kijk objectief naar code, gedrag of beelden en
-rapporteer wat je wel én niet vindt — "geen bewijs gevonden" is een geldig resultaat. Elke claim
-verwijst naar iets aanwijsbaars (bestandsregel, logregel, screenshot). Daarna probeert een
-falsifier-subagent de bevindingen te weerleggen; dat is een aparte stap, los van sectie 2, met als
-hypothese "de claims kloppen".
+tonen, dan levert de invulagent bevindingen. Kijk objectief naar code, gedrag of beelden en
+rapporteer wat je wel en niet vindt; "geen bewijs gevonden" is een geldig resultaat. Elke claim
+verwijst naar iets aanwijsbaars: een bestandsregel, een logregel, een screenshot. Daarna probeert
+een falsifier-subagent de bevindingen te weerleggen. Dat is een aparte stap, los van sectie 2, met
+als hypothese "de claims kloppen".
 
 ## 2. Bewijs controleren via falsifier subagent
 
-Aparte agent op het hoogst beschikbare flagship-model (effort-stand maakt niet uit), verse
+Aparte agent op het hoogst beschikbare flagship-model (effort-stand maakt niet uit), met verse
 context, draaiend op de machine waar de controles liepen zodat hij de implementatie kan inzien.
 Geef hem per criterium deze prompt en plak het antwoord in het veld Falsifier-agent oordeel:
 
