@@ -52,7 +52,7 @@ beeld het tijdstip en het systeem.
 verse context — niet de bouwer, zonder belang bij de uitkomst — objectief naar code, gedrag of
 beelden en rapporteert wat hij wel en niet vindt; een falsifier-subagent probeert die bevindingen
 daarna te weerleggen. Gebruik een actueel flagship-model, en laat een mens tekenen. Zie
-[agent-instructions.md](agent-instructions.md#agent-bevindingen). Het streven blijft:
+[AGENTS.md](AGENTS.md#agent-bevindingen). Het streven blijft:
 programmatisch waar het kan.
 
 ## Wat alleen een mens kan

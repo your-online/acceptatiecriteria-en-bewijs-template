@@ -19,7 +19,7 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
   verse context — niet de bouwer, zonder belang bij de uitkomst — objectief naar code, gedrag of
   beelden en rapporteert wat hij wel en niet vindt. Een falsifier-subagent probeert die bevindingen
   daarna te weerleggen; dit staat los van het falsifier-agent-oordeel bij de soorten oordelen. Zie
-  [Agent-bevindingen in agent-instructions.md](agent-instructions.md#agent-bevindingen). Het
+  [Agent-bevindingen in AGENTS.md](AGENTS.md#agent-bevindingen). Het
   streven blijft: programmatisch waar het kan.
 
 ## Runs en uitrol-checklist
@@ -85,7 +85,7 @@ goedgekeurd, dus de bewaker keurt niet simpelweg alles af.
 
 ## Agent-instructie
 
-De instructie voor de agents staat in een los bestand: [`agent-instructions.md`](agent-instructions.md).
+De instructie voor de agents staat in een los bestand: [`AGENTS.md`](AGENTS.md).
 Daarin staan de prompt voor het invullen van bewijs en de prompt voor de falsifier-subagent, plus
 waarom dat twee gescheiden agents met verse context zijn.
 
