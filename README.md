@@ -13,7 +13,7 @@ structuur eromheen is het template.
 
 ## Soorten bewijs
 
-- **Script uitvoer.** De letterlijke uitvoer van een controle-script. Dit heeft de voorkeur, want
+- **Script uitvoer.** De letterlijke uitvoer van de test of het script dat de controle uitvoert. Dit heeft de voorkeur, want
   er komt geen oordeel aan te pas. Zie de
   [sterkte van bewijsvormen](evidence-best-practices.md#sterkte-van-bewijsvormen-van-sterk-naar-zwak).
 - **Bewijsbestanden.** Wat niet als tekst te vangen is: screenshot, korte gif, logbestand. Liever
@@ -33,25 +33,22 @@ structuur eromheen is het template.
 
 ## Runs en uitrol-checklist
 
-Een ingevuld template heet een **run-document**: één verificatierun, op één machine of omgeving,
-door één uitvoerder. Doe voor elke
-machine of omgeving waar je naar uitrolt (test, pre-productie, een andere laptop) een nieuwe run,
-en maak dus een nieuw run-document.
+Een ingevuld template heet een **run-document**: één run, op één machine of omgeving, door één
+uitvoerder. Rol je bijvoorbeeld uit naar meerdere machines of omgevingen (test, pre-productie,
+een andere laptop), dan krijgt elke machine of omgeving een eigen run-document.
 
-Maak daarnaast een uitrol-checklist die over het geheel van runs gaat. Voorbeeld: een sandbox
-uitrollen naar het hele team, dus niet alleen op je eigen laptop getest maar ook op die van een
-ander. Dan mag er pas uitgerold worden als:
+Een uitrol-checklist gaat over het geheel van runs. Voorbeeld, voor een sandbox die naar het hele
+team gaat:
 
-- [ ] Run 1 is afgerond: elk criterium heeft bewijs en een menselijk oordeel.
-- [ ] Run 2 is uitgevoerd op een andere machine door een andere persoon, met hetzelfde resultaat.
-- [ ] De scriptuitvoer van beide runs toont een verschillende hostname; de tweede machine is
-      daarmee aantoonbaar.
+- [ ] Run 1: elk criterium heeft bewijs en een menselijk oordeel.
+- [ ] Run 2: andere machine, andere persoon, zelfde resultaat.
+- [ ] De scriptuitvoer van beide runs toont een verschillende hostname.
 - [ ] Niet-voldane criteria zijn belegd bij een eigenaar of geaccepteerd als restrisico.
 - [ ] Sign-off door de eigenaar van de uitrol.
 
-Laat het verificatiescript als eerste regels hostname, OS-versie, gebruiker en het controlegetal
-van de build (image-digest) printen. De machine blijkt dan uit de uitvoer zelf. Wat een script
-niet kan vastleggen, krijgt een ondertekeningsveld met naam en datum.
+Laat het script als eerste regels hostname, OS-versie, gebruiker en image-digest printen; de
+machine blijkt dan uit de uitvoer zelf. Wat een script niet kan vastleggen, krijgt een
+ondertekeningsveld met naam en datum.
 
 ## Verder lezen
 
@@ -67,7 +64,7 @@ niet kan vastleggen, krijgt een ondertekeningsveld met naam en datum.
    dropzones.
 3. Klik op **Bewaar als bestand** voor een standalone kopie met alles erin.
 
-## Twee regels die ertoe doen
+## Twee regels
 
 - **Bewijs is een verwijzing, geen bewering.** "Getest en werkt" is geen bewijs; uitvoer of een
   bestand wel, want een ander kan die nalopen.
