@@ -51,8 +51,7 @@ filtering daarop zakte de hacked resolution rate in SpecBench van 28,57% naar 0,
 ([arxiv.org/html/2605.21384v1](https://arxiv.org/html/2605.21384v1)). Leg het verificatiescript
 dus buiten de schrijfrechten van de agent, laat het bewijs de uitgevoerde commando's tonen in
 plaats van alleen de uitkomst, en alarmeer op wijzigingen aan test- en baselinebestanden in
-dezelfde change. Een groene run telt pas als een verse agent hem reproduceert vanaf een schone
-checkout van het commit-SHA.
+dezelfde change.
 
 **Een agent-oordeel is valide bewijs, maar beslist niet.** Drie randvoorwaarden. Eén: een actueel
 flagship-model; het vaak aangehaalde false-positive-onderzoek is gemeten op het inmiddels ruim
@@ -74,7 +73,9 @@ falsifier-subagent op die de criteria en de bijbehorende tests toetst, op een va
 modellen (Opus 5, Fable 5, GPT-5.6, Sol). Best practices hiervoor staan in
 [agentic-coding-skills](https://github.com/your-online/agentic-coding-skills).
 
-## Eén sterk bewijs boven drie zwakke
+## Aanbevelingen
 
-Bewijsverzameling kan zelf theater worden. Beperk het aantal bewijsvormen per criterium tot één
-sterke.
+- **Eén sterk bewijs boven drie zwakke.** Bewijsverzameling kan zelf theater worden; beperk het
+  aantal bewijsvormen per criterium tot één sterke.
+- **Laat een verse agent de run reproduceren.** Een groene run telt pas als hij opnieuw lukt
+  vanaf een schone checkout van het commit-SHA.
