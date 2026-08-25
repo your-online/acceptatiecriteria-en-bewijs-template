@@ -15,6 +15,23 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
 - **Bewijsbestanden** — Alles wat niet als tekst te vangen is: screenshot, GIF, schermopname,
   logbestand. Kan de agent het niet zelf vastleggen, dan levert een persoon het aan.
 
+## Runs en vrijgave
+
+Een ingevuld document is **één verificatierun**: één machine, één uitvoerder. Dat een
+criterium op de laptop van de bouwer werkt, zegt niets over een andere laptop. Daarom is
+"op een tweede machine gecontroleerd" geen extra criterium maar een tweede run, en dus een
+tweede ingevuld bestand.
+
+De sectie Vrijgave onderaan het template bevat de poorten die samen bepalen of er uitgerold
+mag worden. De belangrijkste: twee runs, op verschillende machines, door verschillende
+personen, waarbij de scriptuitvoer van beide runs een **verschillende hostname** toont.
+
+Laat het verificatiescript daarom als eerste regels hostname, OS-versie, gebruiker en
+image-digest printen. Dan is de tweede machine aantoonbaar uit de uitvoer zelf, in plaats van
+een belofte van degene die het invulde. Wat een script niet kan vastleggen, zoals een
+instelling in een grafische interface, krijgt een bevestigingsveld met naam en datum onder de
+bijlagen.
+
 ## Soorten oordelen
 
 - **Falsifier oordeel** — Een aparte beoordelaar (agent) met verse context probeert het bewijs
@@ -54,13 +71,13 @@ waarom dat twee gescheiden agents met verse context zijn.
 De HTML en die instructie staan los van elkaar. Je kunt het template gebruiken zonder agent — dan
 vul je het met de hand in — en je kunt de instructie gebruiken zonder dit template.
 
-## Best practices voor bewijs
+## Bewijsstandaard voor bewijs
 
 Niet elk bewijs is even sterk. Een config-dump met diff of een test met exit code zegt iets anders
 dan een screenshot, en een oordeel van een taalmodel is het zwakste wat er is. Welke vormen sterk
 zijn, wat alleen een mens kan beoordelen, en waar het in de praktijk misgaat (reward hacking,
 modeloordelen als poort, criteria die te makkelijk te claimen zijn) staat in
-[`best-practices.md`](best-practices.md), met bronnen.
+[`bewijsstandaard.md`](bewijsstandaard.md), met bronnen.
 
 ## Gebruik
 

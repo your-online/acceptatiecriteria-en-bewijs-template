@@ -1,6 +1,6 @@
 # Agent-instructie: bewijs invullen en controleren
 
-Lees eerst [`best-practices.md`](best-practices.md): daar staat welke bewijsvormen sterk zijn,
+Lees eerst [`bewijsstandaard.md`](bewijsstandaard.md): daar staat welke bewijsvormen sterk zijn,
 welke zwak, en waar het misgaat.
 
 Deze instructie hoort bij het template `template.html`, maar staat er los van. Je kunt de
