@@ -18,7 +18,7 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
 - **Agent-bevindingen** — Kan iets niet programmatisch worden aangetoond, dan kijkt een agent met
   verse context — niet de bouwer, zonder belang bij de uitkomst — objectief naar code, gedrag of
   beelden en rapporteert wat hij wel en niet vindt. Een falsifier-subagent probeert die bevindingen
-  daarna te weerleggen; dit staat los van het falsifier-oordeel bij de soorten oordelen. Zie
+  daarna te weerleggen; dit staat los van het falsifier-agent-oordeel bij de soorten oordelen. Zie
   [Agent-bevindingen in agent-instructions.md](agent-instructions.md#agent-bevindingen). Het
   streven blijft: programmatisch waar het kan.
 
@@ -42,7 +42,7 @@ iemand het zelf aanpast.
 
 ## Soorten oordelen
 
-- **Falsifier oordeel** — Een aparte beoordelaar (agent) met verse context probeert het bewijs
+- **Falsifier-agent oordeel** — Een aparte beoordelaar (agent) met verse context probeert het bewijs
   onderuit te halen. Uitkomst is VALIDE of WEERLEGD.
 - **Menselijk oordeel** — De eindbeoordeling door een mens. Zet de status van de check op voldaan,
   werk nodig of niet voldaan.
@@ -69,7 +69,7 @@ afgekeurd.
   OK  /tmp niet in allowWrite                 -> exit 1
 ```
 
-**Falsifier oordeel** — VALIDE. Elke foute configuratie wordt afgekeurd en de goede wordt
+**Falsifier-agent oordeel** — VALIDE. Elke foute configuratie wordt afgekeurd en de goede wordt
 goedgekeurd, dus de bewaker keurt niet simpelweg alles af.
 
 **Menselijk oordeel** — Voldaan.

@@ -55,7 +55,7 @@ Sommige criteria zijn niet programmatisch aan te tonen. Dan levert een aparte ag
   gevonden" is een even geldig resultaat.
 - Elke claim verwijst naar iets aanwijsbaars: een bestandsregel, een logregel, een screenshot.
 - Daarna wordt een **falsifier-subagent** gespand met als enig doel de bevindingen te weerleggen.
-  Dit is een aparte stap, los van het falsifier-oordeel over regulier bewijs (sectie 2): hier is de
+  Dit is een aparte stap, los van het falsifier-agent-oordeel over regulier bewijs (sectie 2): hier is de
   hypothese "de claims in de agent-bevindingen kloppen", en de falsifier probeert die onderuit te
   halen.
 
@@ -63,7 +63,7 @@ Sommige criteria zijn niet programmatisch aan te tonen. Dan levert een aparte ag
 
 Aparte agent op het hoogst beschikbare flagship-model, bijvoorbeeld Opus 5, Fable 5, GPT-5.6 of Sol (effort-stand maakt niet uit), met verse context,
 draaiend op de machine waar de controles zijn uitgevoerd zodat hij de implementatie kan inzien.
-Geef hem per criterium deze prompt en plak zijn antwoord in het veld Falsifier oordeel.
+Geef hem per criterium deze prompt en plak zijn antwoord in het veld Falsifier-agent oordeel.
 
 ```
 Hieronder staan een acceptatiecriterium en het bewijs dat ervoor is aangeleverd:
