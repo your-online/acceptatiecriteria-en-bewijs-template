@@ -3,7 +3,7 @@
 Hoort bij `template.html`, maar werkt ook los ervan. Een ingevuld template heet een
 **run-document**. Per criterium staan daarin drie velden: bewijs, falsifier-agent oordeel en
 menselijk oordeel. Lees eerst
-[`evidence-best-practices.md`](evidence-best-practices.md).
+[`evidence-best-practices.md`](references/evidence-best-practices.md).
 
 Invullen en controleren doen twee losse agents, allebei met verse context. Een agent die net zelf
 bewijs invulde, is geneigd zijn eigen werk te bevestigen.

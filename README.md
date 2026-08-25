@@ -1,4 +1,4 @@
-# Acceptatiecriteria en bewijs
+# Acceptatiecriteria, bewijs en oordeel
 
 Een invulbaar HTML-document dat per acceptatiecriterium vastlegt welk bewijs er is geleverd en hoe
 dat beoordeeld is. Voor criteria die niet alleen afgevinkt maar aantoonbaar moeten zijn: een ander
@@ -9,20 +9,20 @@ structuur eromheen is het template.
 
 ## Voorbeeld van een ingevulde check
 
-![Voorbeeld van een ingevulde check](docs/voorbeeld-check.png)
+![Voorbeeld van een ingevulde check](references/voorbeeld-check.png)
 
 ## Soorten bewijs
 
 - **Script uitvoer.** De letterlijke uitvoer van de test of het script dat de controle uitvoert. Dit heeft de voorkeur, want
   er komt geen oordeel aan te pas. Zie de
-  [sterkte van bewijsvormen](evidence-best-practices.md#sterkte-van-bewijsvormen-van-sterk-naar-zwak).
+  [sterkte van bewijsvormen](references/evidence-best-practices.md#sterkte-van-bewijsvormen-van-sterk-naar-zwak).
 - **Bewijsbestanden.** Wat niet als tekst te vangen is: screenshot, korte gif, logbestand. Liever
   gif dan video, want video is zwaar en deelt lastig. Kan de agent het niet zelf vastleggen, dan
   levert een persoon het aan.
 - **Agent-bevindingen.** Voor wat niet programmatisch kan. Een agent met verse context kijkt
   objectief naar code, gedrag of beelden; een falsifier-subagent probeert de bevindingen daarna te
   weerleggen. Zie [AGENTS.md](AGENTS.md#agent-bevindingen) en de
-  [randvoorwaarden](evidence-best-practices.md#drie-valkuilen).
+  [randvoorwaarden](references/evidence-best-practices.md#drie-valkuilen).
 
 ## Soorten oordelen
 
@@ -59,7 +59,7 @@ script of de agent het in.
 
 - [`AGENTS.md`](AGENTS.md): de prompts voor de invulagent en de falsifier-subagent, en waarom dat
   twee gescheiden agents met verse context zijn.
-- [`evidence-best-practices.md`](evidence-best-practices.md): welke bewijsvormen sterk zijn, wat
+- [`references/evidence-best-practices.md`](references/evidence-best-practices.md): welke bewijsvormen sterk zijn, wat
   alleen een mens kan, en waar het misgaat.
 
 ## Gebruik

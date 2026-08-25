@@ -37,7 +37,7 @@ Praktisch: laat de controle zelf zijn bewijs wegschrijven.
    valide mits goed uitgevoerd; zie de randvoorwaarden hieronder.
 
 De vorm waarin een agent-oordeel bewijs wordt voor wat niet programmatisch kan, agent-bevindingen,
-staat uitgewerkt in [AGENTS.md](AGENTS.md#agent-bevindingen).
+staat uitgewerkt in [AGENTS.md](../AGENTS.md#agent-bevindingen).
 
 ## Wat alleen een mens kan
 
