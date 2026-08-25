@@ -24,8 +24,9 @@ ontwikkelomgeving). Vervang ze door je eigen criteria; de structuur eromheen is 
 
 ## Runs en uitrol-checklist
 
-Een ingevuld document is **één verificatierun**: één machine, één uitvoerder. Dat een
-criterium op de laptop van de bouwer werkt, zegt niets over een andere laptop. Daarom is
+Een ingevuld document is **één verificatierun**: één machine of omgeving, één uitvoerder. Dat
+een criterium op de laptop van de bouwer werkt, zegt niets over een andere laptop of een andere
+omgeving. Daarom is
 "op een tweede machine gecontroleerd" geen extra criterium maar een tweede run, en dus een
 tweede ingevuld bestand.
 
