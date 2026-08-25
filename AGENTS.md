@@ -1,6 +1,6 @@
 # Agent-instructie: bewijs invullen en controleren
 
-Hoort bij `template.html`, maar werkt ook los ervan. Een ingevuld template heet een
+Hoort bij `VERIFICATION.html`, maar werkt ook los ervan. Een ingevuld template heet een
 **run-document**. Per criterium staan daarin drie velden: bewijs, falsifier-agent oordeel en
 menselijk oordeel. Lees eerst
 [`evidence-best-practices.md`](references/evidence-best-practices.md).

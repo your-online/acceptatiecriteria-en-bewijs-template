@@ -4,7 +4,7 @@ Een invulbaar HTML-document dat per acceptatiecriterium vastlegt welk bewijs er 
 dat beoordeeld is. Voor criteria die niet alleen afgevinkt maar aantoonbaar moeten zijn: een ander
 moet later kunnen nalopen waarop het groene vinkje is gebaseerd.
 
-De criteria in `template.html` zijn een voorbeeldset. Vervang ze door je eigen criteria; de
+De criteria in `VERIFICATION.html` zijn een voorbeeldset. Vervang ze door je eigen criteria; de
 structuur eromheen is het template.
 
 ## Voorbeeld van een ingevulde check
@@ -64,7 +64,7 @@ script of de agent het in.
 
 ## Gebruik
 
-1. Open `template.html` in een browser; geen server of dependencies nodig.
+1. Open `VERIFICATION.html` in een browser; geen server of dependencies nodig.
 2. Vul de velden bovenaan in, pas de criteria aan, plak bewijs en sleep bestanden naar de
    dropzones.
 3. Klik op **Bewaar als bestand** voor een standalone kopie met alles erin.
