@@ -63,9 +63,3 @@ ondertekeningsveld met naam en datum.
 2. Vul de velden bovenaan in, pas de criteria aan, plak bewijs en sleep bestanden naar de
    dropzones.
 3. Klik op **Bewaar als bestand** voor een standalone kopie met alles erin.
-
-## Twee regels
-
-- **Bewijs is een verwijzing, geen bewering.** "Getest en werkt" is geen bewijs; uitvoer of een
-  bestand wel, want een ander kan die nalopen.
-- **Wie het bewijs invult, beoordeelt het niet.** Anders keurt de invuller zijn eigen werk goed.
