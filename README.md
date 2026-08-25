@@ -71,13 +71,13 @@ waarom dat twee gescheiden agents met verse context zijn.
 De HTML en die instructie staan los van elkaar. Je kunt het template gebruiken zonder agent — dan
 vul je het met de hand in — en je kunt de instructie gebruiken zonder dit template.
 
-## Bewijsstandaard voor bewijs
+## Best practices voor bewijs voor bewijs
 
 Niet elk bewijs is even sterk. Een config-dump met diff of een test met exit code zegt iets anders
 dan een screenshot, en een oordeel van een taalmodel is het zwakste wat er is. Welke vormen sterk
 zijn, wat alleen een mens kan beoordelen, en waar het in de praktijk misgaat (reward hacking,
 modeloordelen als poort, criteria die te makkelijk te claimen zijn) staat in
-[`bewijsstandaard.md`](bewijsstandaard.md), met bronnen.
+[`evidence-best-practices.md`](evidence-best-practices.md), met bronnen.
 
 ## Gebruik
 
