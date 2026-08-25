@@ -1,28 +1,17 @@
 # Agent-instructie: bewijs invullen en controleren
 
-Lees eerst [`evidence-best-practices.md`](evidence-best-practices.md): daar staat welke bewijsvormen sterk zijn,
-welke zwak, en waar het misgaat.
+Hoort bij `template.html`, maar werkt ook los ervan. Per criterium zijn er drie velden: bewijs,
+falsifier-agent oordeel en menselijk oordeel. Lees eerst
+[`evidence-best-practices.md`](evidence-best-practices.md).
 
-Deze instructie hoort bij het template `template.html`, maar staat er los van. Het template zelf
-bevat deze uitleg niet meer: dit bestand is de enige plek waar de agent-instructie staat. Je kunt de
-werkwijze hieronder ook gebruiken zonder dat template, en het template gebruiken zonder agent.
-
-Het gaat om een document waarin per acceptatiecriterium bewijs wordt vastgelegd en beoordeeld.
-Per criterium zijn er drie velden: het bewijs (script uitvoer of bewijsbestanden), het falsifier
-oordeel, en het menselijk oordeel.
-
-## Waarom twee losse agents met verse context
-
-Twee losse agents, allebei met verse context. Dat is geen formaliteit: een agent die net zelf het
-bewijs heeft ingevuld, is geneigd zijn eigen werk te bevestigen. Door ze te scheiden doet de eerste
-alleen wat de uitvoer laat zien, en heeft de tweede geen belang bij een gunstige uitkomst.
+Invullen en controleren doen **twee losse agents, allebei met verse context**: een agent die net
+zelf bewijs invulde, is geneigd zijn eigen werk te bevestigen.
 
 ## 1. Bewijs invullen
 
-Waar de controle een script is, laat je het script de uitvoer zelf wegschrijven. Daar komt geen
-agent aan te pas, en dat is de voorkeur: hoe minder tussenkomst, hoe minder ruimte om het bewijs te
-kleuren. Alleen waar het bewijs complexer is dan een scriptuitvoer zet je er een invulagent op, met
-verse context.
+Waar de controle een script is, schrijft het script de uitvoer zelf weg; daar komt geen agent aan
+te pas en dat heeft de voorkeur. Alleen voor complexer bewijs zet je een invulagent in, met verse
+context.
 
 Prompt voor de invulagent:
 
@@ -33,37 +22,27 @@ Vul dit document in. Per criterium:
 - Plak de letterlijke script uitvoer in het veld. Verkort of herschrijf hem niet.
 - Laat het script als eerste regels hostname, OS-versie, gebruiker en het unieke
   controlegetal van de build (de image-digest) printen. Daarmee is achteraf
-  aantoonbaar op welke machine de run draaide en hoeft niemand op een belofte af
-  te gaan.
-- Kun je iets niet zelf vastleggen, bijvoorbeeld een schermafbeelding, laat het
-  veld dan leeg en noteer dat een persoon dat bestand moet aanleveren.
+  aantoonbaar op welke machine de run draaide.
+- Kun je iets niet zelf vastleggen, laat het veld leeg en noteer dat een persoon
+  dat bestand moet aanleveren.
 - Lukt een controle niet, laat het veld leeg en noteer waarom.
-- Bewijs is een verwijzing, geen bewering. "Getest en werkt" is geen bewijs;
-  uitvoer of een bestand wel, want een ander kan die nalopen.
+- Bewijs is een verwijzing, geen bewering: "getest en werkt" is geen bewijs,
+  uitvoer of een bestand wel.
 - Vul nooit een aanname in, en beoordeel je eigen invulling niet.
 ```
 
-## Agent-bevindingen
-
-Sommige criteria zijn niet programmatisch aan te tonen. Dan levert een aparte agent
-**agent-bevindingen** als bewijsvorm. De regels:
-
-- De agent heeft een **verse context**: hij is niet de bouwer en heeft de bouw-conversatie niet
-  gezien.
-- De agent is **niet geïncentiveerd om bewijs te leveren**. De opdracht is: kijk objectief naar de
-  code, het gedrag of de beelden en rapporteer wat je vindt én wat je niet vindt. "Geen bewijs
-  gevonden" is een even geldig resultaat.
-- Elke claim verwijst naar iets aanwijsbaars: een bestandsregel, een logregel, een screenshot.
-- Daarna wordt een **falsifier-subagent** gespand met als enig doel de bevindingen te weerleggen.
-  Dit is een aparte stap, los van het falsifier-agent-oordeel over regulier bewijs (sectie 2): hier is de
-  hypothese "de claims in de agent-bevindingen kloppen", en de falsifier probeert die onderuit te
-  halen.
+<a id="agent-bevindingen"></a>**Agent-bevindingen.** Is een criterium niet programmatisch aan te
+tonen, dan levert de invulagent bevindingen: kijk objectief naar code, gedrag of beelden en
+rapporteer wat je wel én niet vindt — "geen bewijs gevonden" is een geldig resultaat. Elke claim
+verwijst naar iets aanwijsbaars (bestandsregel, logregel, screenshot). Daarna probeert een
+falsifier-subagent de bevindingen te weerleggen; dat is een aparte stap, los van sectie 2, met als
+hypothese "de claims kloppen".
 
 ## 2. Bewijs controleren via falsifier subagent
 
-Aparte agent op het hoogst beschikbare flagship-model, bijvoorbeeld Opus 5, Fable 5, GPT-5.6 of Sol (effort-stand maakt niet uit), met verse context,
-draaiend op de machine waar de controles zijn uitgevoerd zodat hij de implementatie kan inzien.
-Geef hem per criterium deze prompt en plak zijn antwoord in het veld Falsifier-agent oordeel.
+Aparte agent op het hoogst beschikbare flagship-model (effort-stand maakt niet uit), verse
+context, draaiend op de machine waar de controles liepen zodat hij de implementatie kan inzien.
+Geef hem per criterium deze prompt en plak het antwoord in het veld Falsifier-agent oordeel:
 
 ```
 Hieronder staan een acceptatiecriterium en het bewijs dat ervoor is aangeleverd:
@@ -73,7 +52,7 @@ criterium aantoont.
 Kijk of het bewijs echt aantoont wat er beweerd wordt, of er een niet geteste weg
 naar hetzelfde resultaat bestaat, of het bewijs er ook zo uit zou zien zonder de
 beperking, en of het volledig is. Een bewering zonder verwijzing telt niet als
-bewijs: "getest en werkt" is onvoldoende, uitvoer of een bestand niet.
+bewijs.
 
 Je mag de implementatie inzien. Verzin geen bezwaren om iets te moeten leveren.
 Antwoord met VALIDE of WEERLEGD, plus je redenering in maximaal drie zinnen.
@@ -81,5 +60,5 @@ Antwoord met VALIDE of WEERLEGD, plus je redenering in maximaal drie zinnen.
 
 ## 3. Menselijk oordeel
 
-Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde
-beoordeelt niet, anders keurt de invuller zijn eigen werk goed en zegt een groen vinkje niets.
+Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde,
+beoordeelt niet.
