@@ -1,7 +1,8 @@
 # Agent-instructie: bewijs invullen en controleren
 
-Hoort bij `template.html`, maar werkt ook los ervan. Per criterium zijn er drie velden: bewijs,
-falsifier-agent oordeel en menselijk oordeel. Lees eerst
+Hoort bij `template.html`, maar werkt ook los ervan. Een ingevuld template heet een
+**run-document**. Per criterium staan daarin drie velden: bewijs, falsifier-agent oordeel en
+menselijk oordeel. Lees eerst
 [`evidence-best-practices.md`](evidence-best-practices.md).
 
 Invullen en controleren doen twee losse agents, allebei met verse context. Een agent die net zelf
@@ -16,7 +17,7 @@ context.
 Prompt voor de invulagent:
 
 ```
-Vul dit document in. Per criterium:
+Vul het run-document in. Per criterium:
 
 - Voer de controle uit die onder het criterium staat.
 - Plak de letterlijke script uitvoer in het veld. Verkort of herschrijf hem niet.
@@ -46,17 +47,29 @@ Geef hem per criterium deze prompt en plak het antwoord in het veld Falsifier-ag
 
 ```
 Hieronder staan een acceptatiecriterium en het bewijs dat ervoor is aangeleverd:
-script uitvoer, bestanden, of allebei. Probeer te weerleggen dat dit bewijs het
-criterium aantoont.
+script uitvoer, bestanden, of allebei. Jouw enige doel is dit bewijs te
+weerleggen. Niet "klopt dit?" maar "laat zien dat het niet klopt".
 
-Kijk of het bewijs echt aantoont wat er beweerd wordt, of er een niet geteste weg
-naar hetzelfde resultaat bestaat, of het bewijs er ook zo uit zou zien zonder de
-beperking, en of het volledig is. Een bewering zonder verwijzing telt niet als
-bewijs.
+Toets hard:
+- Als de claim onwaar was, zou dit bewijs er dan nog precies zo uitzien? Een
+  groene run zonder output, "getest en werkt" zonder run, een check die niet
+  rood kán worden: dat overleeft een valse claim en bewijst dus niets.
+- Wie produceerde het bewijs? Tekst van de agent die de claim doet is een
+  verwijzing naar bewijs, nooit het bewijs zelf.
+- Hoort het bewijs bij exact deze versie, of kan het ouder zijn?
+- Is er een niet-geteste weg naar hetzelfde resultaat, en zijn de niet-gecheckte
+  delen benoemd, in plaats van stilte die als dekking leest?
+- Zijn tests gewijzigd, versmald of verwijderd? Dat is een bevinding totdat
+  iemand het tegendeel toont.
 
-Je mag de implementatie inzien. Verzin geen bezwaren om iets te moeten leveren.
-Antwoord met VALIDE of WEERLEGD, plus je redenering in maximaal drie zinnen.
+Je mag de implementatie inzien. Wees niet perfectionistisch: kun je het bewijs
+niet of nauwelijks weerleggen, dan houdt het stand en zeg je dat.
+Zet je antwoord in het veld Falsifier-agent oordeel van deze check in het
+run-document: VALIDE of WEERLEGD, plus je redenering in maximaal drie zinnen.
 ```
+
+De toetsvragen komen uit criteria C6 en C7 van de
+[agentic-coding-skills-rubric](https://github.com/your-online/agentic-coding-skills/blob/main/skills/references/rubric.md).
 
 ## 3. Menselijk oordeel
 

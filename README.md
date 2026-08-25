@@ -33,9 +33,10 @@ structuur eromheen is het template.
 
 ## Runs en uitrol-checklist
 
-Eén ingevuld document = één verificatierun: één machine of omgeving, één uitvoerder. Doe voor elke
+Een ingevuld template heet een **run-document**: één verificatierun, op één machine of omgeving,
+door één uitvoerder. Doe voor elke
 machine of omgeving waar je naar uitrolt (test, pre-productie, een andere laptop) een nieuwe run,
-en vul het template opnieuw volledig in.
+en maak dus een nieuw run-document.
 
 Maak daarnaast een uitrol-checklist die over het geheel van runs gaat. Voorbeeld: een sandbox
 uitrollen naar het hele team, dus niet alleen op je eigen laptop getest maar ook op die van een
