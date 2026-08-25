@@ -22,14 +22,18 @@ Praktisch: laat de controle zelf zijn bewijs wegschrijven.
 5. **Hash of checksum** van image, lockfile of policybestand. Bewijst identiteit, niet gedrag.
 <a id="terminal-opname"></a>6. **Terminal-recording ([asciinema](https://github.com/asciinema/asciinema)).** Tekstueel, klein,
    doorzoekbaar; beter dan een screenshot van een terminal.
-<a id="screenshot"></a>7. **Screenshot.** Bewijst alleen de toestand op dat moment
+7. **UI-trace (Playwright).** DOM-snapshots, netwerk en console in één opname; beantwoordt
+   "waarom", niet alleen "wat", en is lastig te vervalsen. Archiveer hem bij de oplevering, want
+   CI bewaart hem 30 tot 90 dagen
+   ([TestCollab](https://testcollab.com/blog/playwright-testing-evidence-at-scale)).
+<a id="screenshot"></a>8. **Screenshot.** Bewijst alleen de toestand op dat moment
    ([thesoc2.com](https://www.thesoc2.com/post/what-counts-as-valid-evidence-in-soc2-type-ii-audits)).
    Alleen voor criteria waar echt een grafische interface in beeld moet; eis tijdstip en een
    herkenbaar systeem in beeld.
-8. **Korte schermopname (bij voorkeur gif).** Voor gedrag dat alleen in beweging te zien is. Liever
+9. **Korte schermopname (bij voorkeur gif).** Voor gedrag dat alleen in beweging te zien is. Liever
    gif dan video, want video is zwaar en deelt lastig
    ([agileway](https://agileway.substack.com/p/why-recording-videos-for-automated)).
-9. **Oordeel van een agent.** Zwakker dan programmatisch bewijs, maar met de huidige modellen
+10. **Oordeel van een agent.** Zwakker dan programmatisch bewijs, maar met de huidige modellen
    valide mits goed uitgevoerd; zie de randvoorwaarden hieronder.
 
 De vorm waarin een agent-oordeel bewijs wordt voor wat niet programmatisch kan, agent-bevindingen,
@@ -45,8 +49,10 @@ tegenwoordig ook aan een agent toe te vertrouwen, inclusief het beoordelen van d
 **Reward hacking.** Agents halen groen door de test of de verifier zelf aan te passen. Met
 filtering daarop zakte de hacked resolution rate in SpecBench van 28,57% naar 0,56%
 ([arxiv.org/html/2605.21384v1](https://arxiv.org/html/2605.21384v1)). Leg het verificatiescript
-dus buiten de schrijfrechten van de agent, en laat het bewijs de uitgevoerde commando's tonen,
-niet alleen de uitkomst.
+dus buiten de schrijfrechten van de agent, laat het bewijs de uitgevoerde commando's tonen in
+plaats van alleen de uitkomst, en alarmeer op wijzigingen aan test- en baselinebestanden in
+dezelfde change. Een groene run telt pas als een verse agent hem reproduceert vanaf een schone
+checkout van het commit-SHA.
 
 **Een agent-oordeel is valide bewijs, maar beslist niet.** Drie randvoorwaarden. Eén: een actueel
 flagship-model; het vaak aangehaalde false-positive-onderzoek is gemeten op het inmiddels ruim
@@ -60,25 +66,13 @@ dus het blijft gelden hoe goed de modellen ook worden.
 
 **Criteria die niet deugen.** Een criterium deugt pas als een agent geen "geslaagd" kan
 produceren zonder dat het gedrag echt bestaat, en als het inhoudelijk meet wat er gemeten moet
-worden, niet iets dat de coverage hoog laat lijken. Beoordeel dat zelf, of zet er een
+worden, niet iets dat de coverage hoog laat lijken; coverage meet executie, geen verificatie.
+Mutation-testing meet of tests echt falen bij foute code, gericht op de diff
+([Trail of Bits](https://blog.trailofbits.com/2026/04/01/mutation-testing-for-the-agentic-era/)).
+Beoordeel de criteria zelf, of zet er een
 falsifier-subagent op die de criteria en de bijbehorende tests toetst, op een van de sterkste
 modellen (Opus 5, Fable 5, GPT-5.6, Sol). Best practices hiervoor staan in
 [agentic-coding-skills](https://github.com/your-online/agentic-coding-skills).
-
-## Vijf aanbevelingen uit recent onderzoek
-
-1. **Mutation-score voor testkwaliteit.** Coverage meet executie, geen verificatie;
-   mutation-testing meet of tests echt falen bij foute code. Draai het op de diff
-   ([Trail of Bits](https://blog.trailofbits.com/2026/04/01/mutation-testing-for-the-agentic-era/)).
-2. **Onafhankelijke her-run.** Een groene run telt pas als een verse agent hem reproduceert vanaf
-   een schone checkout van het commit-SHA.
-3. **Bewijs buiten schrijfbereik van de bouwer.** De verifier of een CI-hook schrijft het
-   bewijsrecord; alarmeer op wijzigingen aan test- en baselinebestanden in dezelfde change.
-4. **Playwright-trace als eersteklas UI-bewijs.** Beantwoordt "waarom", niet alleen "wat", en is
-   lastig te vervalsen. Archiveer hem bij de oplevering, want CI-retentie is 30 tot 90 dagen
-   ([TestCollab](https://testcollab.com/blog/playwright-testing-evidence-at-scale)).
-5. **Citatie-plicht voor agent-oordelen.** Elke claim koppelt aan een citeerbaar artefact. Bij
-   beeldbeoordeling stemmen meerdere onafhankelijke beoordelingen over meerdere screenshots.
 
 ## Eén sterk bewijs boven drie zwakke
 
