@@ -91,6 +91,26 @@ de modellen ook worden.
 **Claimable criteria.** Een criterium deugt pas als een agent geen "geslaagd" kan produceren zonder
 dat het gedrag echt bestaat. Dat is een strengere eis dan alleen testbaar zijn.
 
+## Vijf aanbevelingen uit recent onderzoek
+
+1. **Mutation-score voor testkwaliteit.** Coverage meet executie, geen verificatie. Mutation-testing
+   (Stryker, mutmut) meet of tests echt falen bij foute code — draai het gericht op de diff, niet
+   repo-breed ([Trail of Bits](https://blog.trailofbits.com/2026/04/01/mutation-testing-for-the-agentic-era/)).
+2. **Onafhankelijke her-run.** Een groene run telt pas als een verse agent hem reproduceert vanaf
+   een schone checkout van het commit-SHA.
+3. **Bewijs buiten schrijfbereik van de bouwer.** De verifier of een CI-hook schrijft het
+   bewijsrecord (met hash, commit-SHA en tijdstip), niet de agent die het werk deed. Alarmeer op
+   wijzigingen aan test- en baselinebestanden in dezelfde change — dat is de klassieke
+   reward-hack-route.
+4. **Playwright-trace als eersteklas UI-bewijs.** DOM-snapshots, netwerk en console met time-travel:
+   beantwoordt "waarom", niet alleen "wat", en is veel lastiger te vervalsen dan een screenshot.
+   Archiveer hem bij de oplevering; CI-retentie is 30–90 dagen
+   ([TestCollab](https://testcollab.com/blog/playwright-testing-evidence-at-scale)).
+5. **Citatie-plicht voor agent-oordelen.** Agents zijn inmiddels goed genoeg om bewijs te
+   beoordelen; de discipline zit in navolgbaarheid. Elke claim koppelt aan een citeerbaar artefact
+   (logregel, testuitvoer, screenshot-hash), en bij beeldbeoordeling stemmen meerdere onafhankelijke
+   beoordelingen over meerdere screenshots in plaats van één enkele blik.
+
 ## Eén sterk bewijs boven drie zwakke
 
 Bewijsverzameling kan zelf theater worden: achter mensen aan zitten voor screenshots in plaats van
