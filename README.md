@@ -26,9 +26,11 @@ structuur eromheen is het template.
 
 ## Soorten oordelen
 
-- **Falsifier-agent oordeel.** Een aparte agent met verse context probeert het bewijs onderuit te
-  halen. Uitkomst: VALIDE of WEERLEGD. Zie
-  [de agent-instructie](AGENTS.md#2-bewijs-controleren-via-falsifier-subagent).
+- **Falsifier-oordeel op drie assen.** Drie agents met verse context vallen het criterium, de
+  toets en het bewijs elk apart aan. Uitkomst per as: VALID, WEAK of REFUTED, waarbij WEAK pas
+  telt met een zin die zegt wat ontbreekt en wat VALID zou kosten. Zie
+  [de agent-instructie](AGENTS.md#2-bewijs-controleren-via-falsifier-subagents) en
+  [de rubriek per as](references/falsifier-assen.md).
 - **Menselijk oordeel.** De eindbeoordeling door een mens: voldaan, werk nodig of niet voldaan.
 
 ## Runs en uitrol-checklist
@@ -57,8 +59,10 @@ script of de agent het in.
 
 ## Verder lezen
 
-- [`AGENTS.md`](AGENTS.md): de prompts voor de invulagent en de falsifier-subagent, en waarom dat
-  twee gescheiden agents met verse context zijn.
+- [`AGENTS.md`](AGENTS.md): de prompts voor de invulagent en de drie falsifier-subagents, en
+  waarom dat gescheiden agents met verse context zijn.
+- [`references/falsifier-assen.md`](references/falsifier-assen.md): de rubriek per as, de schaal
+  VALID/WEAK/REFUTED en waarom het oordeel in drieën valt.
 - [`references/evidence-best-practices.md`](references/evidence-best-practices.md): welke bewijsvormen sterk zijn, wat
   alleen een mens kan, en waar het misgaat.
 
