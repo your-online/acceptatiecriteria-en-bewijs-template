@@ -145,6 +145,42 @@ de toets buiten de hunks zag en gemeld zou hebben, gaat naar een **bevindingenli
 alsof de repository schoon is, terwijl de toets net heeft aangetoond van niet. Een grens die stilletjes
 weggooit wat hij zag, is geen grens maar een filter op slecht nieuws.
 
+### Oordelen landen in het document, altijd
+
+Een oordeel dat in een chatbericht, in het eindverslag van een agent of in een JSON-bestand op
+schijf blijft staan, is niet opgeleverd. Het rundocument is de oplevering; al het andere is
+werkmateriaal. De laatste stap van een falsifierronde is dus nooit "terugrapporteren", maar dat
+elke as van elk criterium een oordeel draagt of een streep. Niemand hoort daarom te hoeven vragen,
+en een ronde is niet af zolang het er niet staat.
+
+**De falsifier schrijft het document niet; de uitvoerder doet dat.** Falsifiers draaien met verse
+context en naast elkaar — daarvoor worden ze juist per as en per sectie gesplitst — en agents die
+tegelijk in één bestand schrijven, overschrijven elkaar. Geef elke falsifier één uitvoerbestand,
+genoemd naar zijn as en zijn sectie, met per criterium één regel. Voeg ze daarna samen, en laat de
+generator die map bij elke run inlezen, zodat samenvoegen geen stap is die iemand kan vergeten. Een
+oordeel dat wacht op een mens die aan een koppelstap denkt, blijft een dag in een bestand liggen.
+
+**Voeg samen zodra er een terugkomt, niet aan het eind.** Alles tegelijk inbouwen voelt netter en
+kost de lezer een dag zicht. Een half gevuld document is eerlijker dan een leeg document met een
+belofte.
+
+Drie regels voor het samenvoegen zelf:
+
+- **Letterlijk overnemen.** Verzacht, vat niet samen en rijm niets glad tijdens het overzetten.
+  Heeft een falsifier iets weerlegd dat jij gebouwd hebt, dan gaat de weerlegging er heel in. De
+  neiging om te snoeien is het sterkst op precies de plek waar snoeien de meeste schade doet.
+- **Wat er al staat wint.** Een oordeel dat al in het document staat kan een met de hand toebedeelde
+  as dragen, of een reactie van de uitvoerder op een eerdere aanval; een nieuwe ronde vult aan en
+  overschrijft niet.
+- **Geen oordeel is een streep, nooit een gunstig vermoeden.** Een as die niemand heeft aangevallen,
+  is een as die niemand heeft aangevallen, en dat hoort de rij te zeggen.
+
+Twee assen hebben helemaal geen bewijs nodig. De criterium-as vraagt of dit de juiste eis is — de
+tekst volstaat. De test-as vraagt of de toets rood kan worden — de toets zelf volstaat. Alleen de
+bewijs-as wacht op een run. Start die twee dus zodra de criteria en de toetsen bestaan, in plaats
+van de hele ronde op te houden tot het bewijs vastligt; wachten met aanvallen tot er bewijs is, is
+de gebruikelijkste manier waarop een ronde er nooit komt.
+
 ## 3. Menselijk oordeel
 
 Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde,
