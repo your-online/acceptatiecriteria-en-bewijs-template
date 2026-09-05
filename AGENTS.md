@@ -236,6 +236,32 @@ worden, een criterium dat je haalt door iets weg te laten, bewijs dat bij een an
 zijn meer waard wanneer ze niet bedolven liggen onder een dozijn opmerkingen die op elke eis ooit
 geschreven van toepassing zouden zijn.
 
+### De goedkoopste groen
+
+Vraag bij elk criterium: *wat is de goedkoopste manier om dit groen te krijgen, en is die manier
+erger dan het criterium helemaal niet hebben?* Is de goedkoopste groen gewoon het werk doen, dan
+pleit dat voor de eis. Maakt de goedkoopste groen de code slechter — een regel weghalen in plaats van
+herschrijven, een schakelaar omzetten in plaats van scannen, een parameter hernoemen zodat de regel
+niet meer aanslaat — dan is dat een weerlegging, en noem de perverse prikkel erbij.
+
+Die vraag doet werk dat de drie vormen hierboven niet doen. Vormen zijn categorieën, en categorieën
+kun je afvinken zonder af te leiden of ze hier gelden. De goedkoopste-groen-vraag dwingt je een
+concrete route te bedenken, en pas als je die route hebt weet je of de eis het gedrag stuurt dat ze
+bedoelt.
+
+### Een verdeling is een aanleiding om te kijken, nooit een uitspraak
+
+Je meldt je eigen verdeling, en bij een overwegend negatieve set kijk je nog een keer. Dat snijdt
+twee kanten op, en de tweede wordt vergeten: een verdeling kan een ronde alleen veroordelen zolang de
+losse oordelen niet zijn opengeslagen. Sla ze open, leg elke weerlegging naast het bestand waar ze
+naar wijst, en de telling draagt niets meer uit zichzelf. Een set die echt drie kapotte criteria bevat
+hoort met drie weerleggingen terug te komen.
+
+Valt een ronde anders uit dan verwacht, dan is de volgende stap dus niet de instructie versoepelen
+maar de oordelen nakijken die je niet had voorspeld. Houden ze stand, dan was de eisenset slechter
+dan je dacht en had de ronde gelijk. Vallen ze bij inspectie uit elkaar, dan pas staat de kalibratie
+scheef.
+
 ## 3. Menselijk oordeel
 
 Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde,
