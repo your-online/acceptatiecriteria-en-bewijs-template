@@ -109,6 +109,42 @@ bewijs alsnog zijn eigen werk. Hij lost wel op dat een lezer moet raden of een `
 liggen of juist aanleiding was om iets te veranderen. De as blijft `WEAK` tot een falsifier de
 nieuwe formulering heeft aangevallen.
 
+## De meetgrens: oordeel op de hunks, niet op de bestanden
+
+Een conformiteitstoets beantwoordt de vraag of dit werk de regels volgt, niet of de repository schoon
+is. Die twee lopen meteen uiteen: raak één regel aan in een bestand van vierhonderd regels, en een
+toets die per bestand oordeelt geeft je alles terug wat dat bestand sinds zijn geboorte heeft
+verzameld. De rij staat dan rood om werk dat niemand in deze oplevering gedaan heeft, en de
+beoordelaar kan jouw gebreken niet meer onderscheiden van de geërfde. Het is ook de snelste manier om
+te zorgen dat niemand het document nog leest.
+
+Begrens dus de **bevinding**, niet het lezen. Lees het hele bestand — dat heb je nodig, want vrijwel
+niets wat de moeite waard is staat in één losse regel: of een methode async is, of `base.Configure()`
+het eerste statement is, of een filter op een al opgehaalde lijst zit. Meld daarna alleen wat op een
+regel binnen een gewijzigde hunk valt. Een toets die letterlijk alleen de difftekst als invoer krijgt
+is een slechtere toets, geen strengere: hij mist juist de context die hem correct maakt.
+
+Drie soorten regels breken onder deze begrenzing, en elk daarvan moet de toets met zoveel woorden
+benoemen. Doe je dat niet, dan slikt de grens stilletjes echte gebreken in — en dat is gevaarlijker
+dan de ruis die hij moest wegnemen.
+
+- **Bestaansregels** — een nieuw endpoint hoort een requestbestand te hebben, een testbestand een
+  onderwerp dat bestaat. Er is geen hunk om aan te haken als het punt juist is dat er iets ontbreekt.
+  Grens: het hele bestand, en alleen als dat bestand nieuw is in deze oplevering.
+- **Verwijderregels** — vervangen code is weg, geen verweesde tests, geen dode verwijzingen. Het
+  bewijs zit in de *verwijderde* regels. Een toets die alleen toegevoegde regels leest, ziet het
+  nooit; hij moet ook de verwijderde hunks lezen.
+- **Repo-brede invarianten** — één registratie per interface, geen dubbele route, geen tweede type
+  met dezelfde naam. Die zijn alleen over de hele boom zinvol. Meet repo-breed, maar meld alleen als
+  een gewijzigde regel deel uitmaakt van wat de invariant breekt; anders rapporteer je de botsing van
+  een ander.
+
+En betaal de prijs die de grens maakt, anders wordt hij een manier om er goed uit te zien. Alles wat
+de toets buiten de hunks zag en gemeld zou hebben, gaat naar een **bevindingenlijst voor de eigenaar**
+— genoemd, geteld, in het document, maar buiten de criteriumrijen. Zonder die lijst leest het document
+alsof de repository schoon is, terwijl de toets net heeft aangetoond van niet. Een grens die stilletjes
+weggooit wat hij zag, is geen grens maar een filter op slecht nieuws.
+
 ## 3. Menselijk oordeel
 
 Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde,
