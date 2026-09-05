@@ -181,6 +181,61 @@ bewijs-as wacht op een run. Start die twee dus zodra de criteria en de toetsen b
 van de hele ronde op te houden tot het bewijs vastligt; wachten met aanvallen tot er bewijs is, is
 de gebruikelijkste manier waarop een ronde er nooit komt.
 
+### Proportionaliteit: welke aanvallen tellen
+
+Een falsifier die in drie van de vier assen iets vindt, vindt niets bijzonders meer. De lat is dan
+verschoven van *is dit de juiste eis* naar *is dit de best denkbare eis*, en dat zijn twee
+verschillende vragen — op de tweede is altijd een antwoord te bedenken.
+
+**Een aanval telt als een bekwame collega hem plausibel zou maken**: per ongeluk, uit gemak, of in
+navolging van een precedent dat vlakbij in deze codebase al bestaat. `Skip=` op zes falende tests
+zetten om een groene suite te krijgen is gemak, en dat telt. Eén betekenisloze logregel per tak
+schrijven om een loggingregel te halen is opzettelijk gaming, en dat telt niet. De vorm van de
+dichtstbijzijnde bestaande handler overnemen telt wél, ook als die vorm fout is — juist dan, want zo
+wordt de fout in werkelijkheid gemaakt.
+
+**De uitzondering is alles over beveiliging, toegang en rechten.** Daar is een tegenstander juist het
+model, dus een aanval die opzet vereist telt daar wel. Rek die uitzondering niet op naar conventies
+en hygiëne door ze beveiligingsachtig te noemen.
+
+**VALIDE is de normale uitkomst voor een goed geformuleerd criterium.** Komt minder dan ongeveer de
+helft van een set valide terug, kijk dan nog een keer voordat je rapporteert: je toetst dan
+waarschijnlijk aan een ideaal en niet aan de eis. Noem je eigen verdeling in één regel aan het eind.
+Dat getal is zelf bewijs over je kalibratie, en het stelt de lezer in staat je te wegen.
+
+**Val een rij niet aan op wat een naburige rij al dekt.** Overlap is een eigenschap van de set, geen
+gebrek in één criterium. Noem het één keer als opmerking over de set en laat de rij met rust.
+
+**"Spreekt zijn bereik niet uit" is op zichzelf geen zwakte.** Een criterium dat een bekwame lezer
+goed zou toepassen, doet zijn werk; eisen worden gelezen door mensen en niet ontleed door een
+machine. Het wordt pas een zwakte als je twee lezingen kunt noemen die tot *ander werk* leiden —
+noem ze dan allebei.
+
+### Drie vormen die weerlegd blijven, wat proportionaliteit ook zegt
+
+Proportionaliteit snoeit speculatieve aanvallen. Ze verzacht deze drie niet. Een set die met nul
+weerleggingen terugkomt is even verdacht als een set die vrijwel geheel weerlegd is, want meestal
+betekent het dat juist deze drie als zwakte zijn weggeschreven.
+
+- **Je haalt hem door iets weg te laten.** Falende tests overslaan, de rijen die tegenspreken
+  verwijderen, de gedocumenteerde verzameling versmallen tot hij klopt. Is de goedkoopste weg naar
+  groen iets weghalen, dan meet het criterium aanwezigheid en geen inhoud.
+- **Hij bindt aan een bron die dat niet zegt.** Een criterium dat een instructiebestand, een besluit
+  of een norm aanhaalt die op die plek de eis niet draagt, is nergens aan verankerd. Dat de regel op
+  zichzelf verstandig kan zijn doet er niet toe: de rij claimt een mandaat dat hij niet heeft. Noem
+  erbij wat de bron wel zegt.
+- **De toets kan niet rood worden.** Een vastpintest op een schemafeit, een assertie op een waarde
+  die per constructie vastligt, een vergelijking die blijft zwijgen als je hem door onzin vervangt.
+  Dat is geen zwakke toets; dat is geen toets.
+
+Al het andere -- een ontbrekend randgeval, een onuitgesproken aanname, een aanval die opzet vereist
+-- is hoogstens een zwakte, en vaak niets.
+
+Niets hiervan vraagt je om mild te zijn. De bevindingen die ertoe doen — een toets die niet rood kan
+worden, een criterium dat je haalt door iets weg te laten, bewijs dat bij een andere versie hoort —
+zijn meer waard wanneer ze niet bedolven liggen onder een dozijn opmerkingen die op elke eis ooit
+geschreven van toepassing zouden zijn.
+
 ## 3. Menselijk oordeel
 
 Een mens zet daarna de status: voldaan, werk nodig of niet voldaan. Wie het bewijs invulde,
